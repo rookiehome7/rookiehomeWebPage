@@ -1,0 +1,66 @@
+[debug] [2020-01-30T16:22:28.629Z] ----------------------------------------------------------------------
+[debug] [2020-01-30T16:22:28.631Z] Command:       /usr/local/Cellar/node/12.7.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-01-30T16:22:28.631Z] CLI Version:   7.12.1
+[debug] [2020-01-30T16:22:28.631Z] Platform:      darwin
+[debug] [2020-01-30T16:22:28.631Z] Node Version:  v12.7.0
+[debug] [2020-01-30T16:22:28.631Z] Time:          Thu Jan 30 2020 23:22:28 GMT+0700 (Indochina Time)
+[debug] [2020-01-30T16:22:28.631Z] ----------------------------------------------------------------------
+[debug] [2020-01-30T16:22:28.632Z] 
+[debug] [2020-01-30T16:22:28.642Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-30T16:22:28.642Z] > authorizing via signed-in user
+[debug] [2020-01-30T16:22:28.643Z] [iam] checking project rookiehome-c2daa for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-01-30T16:22:28.644Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rookiehome-c2daa:testIamPermissions  
+
+[debug] [2020-01-30T16:22:29.912Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-30T16:22:29.915Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rookiehome-c2daa  
+ 
+[debug] [2020-01-30T16:22:30.273Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'rookiehome-c2daa'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-01-30T16:22:30.277Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rookiehome-c2daa/versions  
+
+[debug] [2020-01-30T16:22:32.319Z] <<< HTTP RESPONSE 200
+[info] i  hosting[rookiehome-c2daa]: beginning deploy...
+[info] i  hosting[rookiehome-c2daa]: found 42 files in dist
+[debug] [2020-01-30T16:22:32.436Z] [hosting] hash cache [ZGlzdA] stored for 42 files
+[debug] [2020-01-30T16:22:32.436Z] [hosting][hash queue][FINAL]
+[debug] [2020-01-30T16:22:32.436Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rookiehome-c2daa/versions/d83088c6d2a04896:populateFiles  
+ <request body omitted>
+[debug] [2020-01-30T16:22:35.010Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-30T16:22:35.032Z] [hosting][populate queue][FINAL]
+[debug] [2020-01-30T16:22:35.032Z] [hosting] uploads queued: 40
+[debug] [2020-01-30T16:22:37.969Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[rookiehome-c2daa]: file upload complete
+[debug] [2020-01-30T16:22:37.970Z] [hosting] deploy completed after 5649ms
+[debug] [2020-01-30T16:22:37.971Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "rookiehome-c2daa"
+    },
+    "site": "rookiehome-c2daa",
+    "version": "sites/rookiehome-c2daa/versions/d83088c6d2a04896"
+  }
+]
+[info] i  hosting[rookiehome-c2daa]: finalizing version...
+[debug] [2020-01-30T16:22:37.972Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/rookiehome-c2daa/versions/d83088c6d2a04896?updateMask=status  
+
+[debug] [2020-01-30T16:22:39.723Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-30T16:22:39.724Z] [hosting] finalized version for rookiehome-c2daa:
+[info] ✔  hosting[rookiehome-c2daa]: version finalized
+[info] i  hosting[rookiehome-c2daa]: releasing new version...
+[debug] [2020-01-30T16:22:39.725Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/rookiehome-c2daa/releases?version_name=sites/rookiehome-c2daa/versions/d83088c6d2a04896  
+
