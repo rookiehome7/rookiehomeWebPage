@@ -13,15 +13,21 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { ContactComponent } from './contact/contact.component';
+
+import { VideosComponent } from './video/videos.component';
+
 import { NgxSpinnerModule } from '../../../node_modules/ngx-spinner';
 import { ProjectsComponent } from './projects/projects.component';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     SnotifyModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+
   ],
   declarations: [
     ProfileComponent,
@@ -35,7 +41,8 @@ import { ProjectsComponent } from './projects/projects.component';
     EducationComponent,
     ReferenceComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    VideosComponent
   ],
   providers: [
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
@@ -43,3 +50,4 @@ import { ProjectsComponent } from './projects/projects.component';
   ]
 })
 export class ProfileModule { }
+

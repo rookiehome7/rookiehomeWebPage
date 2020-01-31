@@ -9,6 +9,8 @@ import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileModule } from './profile/profile.module';
 
+// import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 const routes: Routes = [
   {
@@ -32,8 +34,10 @@ const config: ExtraOptions = {
     AppRoutingModule,
     HttpClientModule,
     ProfileModule,
+    // NgxYoutubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// platformBrowserDynamic().bootstrapModule(AppModule);
